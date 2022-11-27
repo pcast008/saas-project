@@ -1,11 +1,11 @@
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;  
-  color: #677788;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;  
+    color: #677788;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 .top-section {
@@ -1106,11 +1106,3 @@ textarea {
 }
 
 
-
-@media (max-width: 768px) {
-
-
-    .nav {
-        display: none;
-    }
-}
