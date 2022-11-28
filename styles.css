@@ -7,8 +7,12 @@
     box-sizing: border-box;
 }
 
-.top-section {
-    position: relative;
+html {
+    scroll-behavior: smooth;
+}
+
+.fa-bars {
+    display: none;
 }
 
 .container {
@@ -79,8 +83,6 @@
     padding: 40px 30px 0px;
     display: flex;
     gap: 10px;
-    height: 446px;
-    flex-wrap: wrap;
 }
 
 .left-part {
@@ -108,7 +110,6 @@
 
 .action-section {
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 24px;
@@ -134,6 +135,8 @@
 
 .right-part {
     position: relative;
+    width: 477px;
+    height: 406px;
 }
 
 .asana {
@@ -321,16 +324,13 @@
 
 .banner-section {
     padding: 0px 30px 80px;
-    height: 550px;
 }
 
 .banner-section-content {
     display: flex;
-    gap: 10px;
     background: #F8FAFE;
-    width: 964px;
     height: 470px;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .banner-content-left {
@@ -352,17 +352,14 @@
 
 .banner-content-right {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-end;
-    padding: 0px;
-    gap: 10px;
-    width: 504px;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .banner-content-right img {
+    height: 353px;
     width: 504px;
-    height: 353px
 }
 
 .why-front-section {
@@ -591,7 +588,6 @@
 .brands-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0px 0px 80px;
     gap: 45px;
     height: 208px;
@@ -608,15 +604,11 @@
 
 .brands-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 0px 30px;
-    gap: 100px;
-    height: 59px;
+    justify-content: space-between;
 }
 
 .brands-list img {
-    width: 112.8px;
     height: 40px;
 }
 
@@ -1130,4 +1122,153 @@ textarea {
     cursor: pointer;
 }
 
+.fa-angles-up::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100000000px;
+    background-color: #2576FF;
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .nav {
+        display: none;
+    }
+
+    .header-with-bars {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        height: 86px;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .fa-bars::before {
+        font-size: larger;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-part {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .action-section {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-part {
+        width: 712px;
+        height: 309px;
+    }
+    
+    .asana {
+        left: 533px;
+        top: 0px;
+    }
+    
+    .calendar {
+        left: 517px;
+        top: 229px;
+    }
+    
+    .weave {
+        left: 414px;
+        top: 99px;
+    }
+    
+    .paypal {
+        left: 112px;
+        top: 99px;
+    }
+    
+    .atlassian {
+        left: 287px;
+        top: 0px;
+    }
+    
+    .google-ads {
+        left: 230px;
+        top: 209px;
+    }
+    
+    .google {
+        left: 110px;
+        top: 0px;
+    }
+
+    .benefit-list {
+        flex-wrap: wrap;
+    }
+
+    .benefit-item {
+        width: 339px;
+    }
+
+    .banner-section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 708px;
+        margin: auto;
+    }
+
+    .banner-content-left {
+        align-items: center;
+        width: auto;
+    }
+
+    .banner-content-right img {
+        width:708px;
+    }
+
+    .hubspot-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hubspot-left {
+       background-color: #0066FF;
+       display: flex;
+    }
+
+    .hubspot-right {
+        align-items: center;
+    }
+
+    .hubspot-right-description {
+        align-items: center;
+    }
+
+    .plans-features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-header, .plan-footer {
+        align-items: center;
+    }
+
+    .plan-divider {
+        width: 600px;
+    }
+}
 
