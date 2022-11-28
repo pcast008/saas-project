@@ -50,12 +50,18 @@
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     border: none;
     border-radius: 30px;
     background-color: #2476FF;
-    color: white;
     padding: 15px 25px;
     cursor: pointer;
+}
+
+.btn-text, .fa-circle-play::before, .fa-caret-right::before {
+    color: white;
 }
 
 .status {
@@ -111,9 +117,19 @@
 }
 
 .learn-more {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.learn-more-text {
     color: #2476FF;
     font-weight: 700;
-    cursor: pointer;
+}
+
+.learn-more i::before {
+    color: #2476FF;
 }
 
 .right-part {
@@ -267,7 +283,6 @@
     gap: 30px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .benefit-item {
@@ -471,7 +486,7 @@
     gap: 10px;
 }
 
-.play {
+.fa-play::before {
     width: 15px;
     height: 20px;
     font-weight: 900;
@@ -761,16 +776,16 @@
     display: flex;
     justify-content: center;
     background: #20335B;
+    max-width: 95%;
+    margin: auto;
 }
 
 .hire-us-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 0px 0px 70px;
     gap: 60px;
-    width: 514.5px;
-    height: 708px;
+    padding: 30px;
 }
 
 .hire-us-left-top {
@@ -865,12 +880,7 @@
 }
 
 .hire-us-right {
-    display: flex;
-    flex-direction: column;
     padding: 30px;
-    gap: 10px;
-    height: 708px;
-    width: 514.5px;
 }
 
 .hire-us-form {
@@ -879,8 +889,6 @@
     align-items: center;
     padding: 30px;
     gap: 37px;
-    width: 454.5px;
-    height: 648px;
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -901,7 +909,6 @@
 .form-group {
     display: flex;
     gap: 20px;
-    width: 392px;
 }
 
 .form-input, textarea {
@@ -921,11 +928,11 @@ select.form-input {
 
 textarea {
     resize: none;
-    width: 392px;
     height: 150px;
     font-weight: 510;
     font-size: 14px;
     line-height: 22px;
+    font-family: inherit;
 }
 
 .privacy {
@@ -1065,7 +1072,6 @@ textarea {
 
 .terms-text {
     color: #2576FF;
-    ;
 }
 
 .social-list {
@@ -1074,6 +1080,16 @@ textarea {
     justify-content: center;
     gap: 20px;
     list-style: none;
+}
+
+.social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #ECF2FF;
+    border-radius: 5px;
 }
 
 .united-states {
@@ -1110,7 +1126,7 @@ textarea {
 }
 
 .benefit-item:hover {
-    transform: translateY(-10px) ;
+    transform: translateY(-3px) ;
     cursor: pointer;
 }
 
