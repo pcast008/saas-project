@@ -73,6 +73,12 @@ html {
     color: white;
 }
 
+.fa-circle-play::before {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+}
+
 .status {
     border: none;
     border-radius: 15px;
@@ -111,6 +117,7 @@ html {
 .title {
     font-size: 40px;
     color: black;
+    width: 300px;
 }
 
 .action-section {
@@ -299,7 +306,6 @@ html {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     padding: 20px;
     gap: 20px;
-    /* width: 13.656rem; */
 }
 
 .item-content {
@@ -1237,7 +1243,9 @@ textarea {
     }
 
     .benefit-list {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .benefit-item {
@@ -1273,6 +1281,11 @@ textarea {
     .banner-2 img {
         height: 304px;
         width: 708px;
+    }
+
+    .banner-frame {
+        width: 708px;
+        margin: auto;
     }
 
     .play-button {
@@ -1399,6 +1412,229 @@ textarea {
 }
 
 @media (max-width: 767px) {
+    .title {
+        width: 400px;
+    }
+    
+    .left-part {
+        width: 328px;
+        height: 235px;
+        padding: 0px 0px 60px;
+    }
+
+    .right-part {
+        width: 328px;
+        height: 309px;
+    }
+
+    .asana {
+        left: 248px;
+        top: 0px;
+    }
+    
+    .calendar {
+        left: 239px;
+        top: 219px;
+    }
+    
+    .weave {
+        left: 184px;
+        top: 99px;
+    }
+    
+    .paypal {
+        left: 0px;
+        top: 99px;
+    }
+    
+    .atlassian {
+        left: 114px;
+        top: 0px;
+    }
+    
+    .google-ads {
+        left: 106px;
+        top: 209px;
+    }
+    
+    .google {
+        left: 0px;
+        top: 0px;
+    }
+
+    .key-benefits {
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    .benefit-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .benefit-item {
+        width: 328px;
+    }
+
+    .benefits-title-description {
+        width: 300px;
+        text-align: center;
+    }
+
+    .banner-section {
+        padding: 30px;
+    }
+
+    .banner-section-content {
+        width: 328px;
+        height: 470px;
+        gap: 10px;
+    }
+
+    .banner-content-left {
+        width: 325px;
+        text-align: center;
+    }
+
+    .banner-content-right {
+        width: 328px;
+    }
+
+    .banner-content-right img {
+        height: 100%;
+    }
+
+    .why-front-section {
+        width: 360px;
+        height: 488px;
+    }
+
+    .why-front-title-description {
+        width: 328px;
+        height: 96px;
+    }
+
+    .bullets-list {
+        flex-direction: column;
+        width: 360px;
+        height: 251px;
+        align-items: flex-start;
+        gap: 17px;
+    }
+
+    .bullet {
+        flex-direction: row;
+        padding: 0;
+        width: auto;
+    }
+
+    .left-wing, .right-wing {
+        display: none;
+    }
+
+    .banner-2 img, .banner-frame {
+        width: 358px;
+        height: 154px;
+    }
+
+    .play-button {
+        left: 144px;
+        top: 42px;
+    }
+
+    .download-1 img {
+        width: 141px;
+        height: 261px;
+    }
+
+    .download-2 img {
+        width: 262px;
+        height: 300px;
+    }
 
 
+
+
+
+
+
+
+    .brands-section {
+        height: auto;
+    }
+
+    .brands-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pricing-section {
+        padding-bottom: 30px;
+    }
+
+    .plan {
+        width: 328px;
+    }
+
+    .plan-divider {
+        width: 248px;
+    }
+
+    .row-1, .row-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hire-us-left-top, .hire-us-left-bottom {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hire-us-title-divider {
+        width: 330px;
+    }
+
+    .hire-us-left, .footer-section-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group, .social {
+        flex-direction: column;
+    }
+
+    .form-group.privacy {
+        flex-direction: row;
+    }
+
+    .footer-section-1 {
+        gap: 40px;
+    }
+
+    .footer-section-1-sub-1, .footer-section-1-sub-2 {
+        text-align: center;
+    }
+
+    .footer-phone, .career, .sub-help, .sub-account {
+        justify-content: center;
+    }
+
+    .footer-section-1-sub-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-divider {
+        width: 328px;
+    }
+
+    .social {
+        gap: 30px;
+    }
+
+    .all-rights {
+        width: auto;
+    }
 }
