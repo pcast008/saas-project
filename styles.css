@@ -401,6 +401,8 @@ html {
 .bullets-list {
     display: flex;
     padding: 0px 34px;
+    align-items: center;
+    width: 1000px;
 }
 
 .bullet {
@@ -410,7 +412,6 @@ html {
     align-items: center;
     padding: 26px 0px;
     gap: 24px;
-    /* width: 14.938rem; */
 }
 
 .left-wing, .right-wing {
@@ -425,7 +426,6 @@ html {
     justify-content: center;
     padding: 0px;
     gap: 4px;
-    /* width: 239px; */
 }
 
 .bullet-circle {
@@ -1153,7 +1153,7 @@ textarea {
     font-size: small;
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (max-width: 1023px) {
     .nav {
         display: none;
     }
@@ -1398,3 +1398,7 @@ textarea {
 
 }
 
+@media (max-width: 767px) {
+
+
+}
