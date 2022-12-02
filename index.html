@@ -464,19 +464,20 @@
     </div>
     <a id="scrollUp" href="#pageTop"><i class="fa-solid fa-angle-up"></i></a>
     <script>
-        const header = document.querySelector('.header')
         const headerBars = document.querySelector('.header-with-bars')
 
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 400) {
-                header.classList.add('sticky')
                 headerBars.classList.add('sticky')
+                headerBars.classList.remove('non-sticky')
+            } else if (headerBars.classList.contains('sticky')){   
+                headerBars.classList.remove('sticky')
+                headerBars.classList.add('non-sticky')
+                setTimeout(() => {
+                    headerBars.classList.remove('non-sticky')   
+                }, 500)                             
             }
-            else {
-                header.classList.remove('sticky')               
-                headerBars.classList.remove('sticky')              
-            }
-        })
+        })    
 
         const hamburger = document.querySelector('.fa-bars')
         const headerModal = document.getElementById('header-modal')
