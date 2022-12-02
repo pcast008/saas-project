@@ -11,13 +11,25 @@ html {
     scroll-behavior: smooth;
 }
 
+.top-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 470px;
+    left: 0px;
+    top: 0px;   
+    background: linear-gradient(312.73deg, rgba(217, 217, 217, 0.44) 17.61%, rgba(217, 217, 217, 0) 55.85%);
+    transform: skewY(-15deg);
+    z-index: -10;
+}
+
 .accent {
     color: #2476FF;
     cursor: pointer;
 }
 
-.fa-bars {
-    display: none;
+.fa-bars-container {
+    margin-right: 50px;
 }
 
 .container {
@@ -36,6 +48,15 @@ html {
     justify-content: space-between;
     padding: 10px 30px;
     height: 86px;
+}
+
+.header-with-bars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    height: 86px;
+    display: none;
 }
 
 .nav {
@@ -430,7 +451,13 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    gap: 4px;
+}
+
+.circle-right-wing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 4px;
 }
 
@@ -514,6 +541,7 @@ html {
 
 .downloads-container {
     position: relative;
+    width: 100%;
 }
 
 .download-1 img {
@@ -1077,6 +1105,11 @@ textarea {
     color: #2576FF;
 }
 
+.social-us {
+    display: flex;
+    gap: 20px;
+}
+
 .social-list {
     display: flex;
     align-items: center;
@@ -1105,6 +1138,14 @@ textarea {
     justify-content: center;
     align-items: center;
     height: 30px;
+}
+
+.us-text, .fa-angle-down::before {
+    color: black;
+}
+
+.fa-angle-down::before {
+    font-size: smaller;
 }
 
 .all-rights {
@@ -1159,8 +1200,119 @@ textarea {
     font-size: small;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+    animation: from-top .5s ease-in-out;
+}
+
+@keyframes from-top {
+    0% { 
+        transform: translateY(-50px);
+        opacity: 0;
+    } 
+}
+
+.non-sticky {
+    animation: hide-away .5s ease-in-out;
+}
+
+@keyframes hide-away {
+    0% { 
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    100% {
+
+    }
+}
+
+.animate-slide-up {
+    animation: slide-up .5s ease-in-out;
+}
+
+@keyframes slide-up {
+    0% { 
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.animate-slide-up-1 {
+    animation: slide-up-1 .5s ease-in-out .05s;
+}
+
+@keyframes slide-up-1 {
+    0% { 
+        transform: translateY(70px);
+        opacity: 0;
+    }
+}
+
+.animate-slide-up-2 {
+    animation: slide-up-1 .5s ease-in-out .1s;
+}
+
+@keyframes slide-up-2 {
+    0% { 
+        transform: translateY(80px);
+        opacity: 0;
+    }
+}
+
+.header-modal {
+    display: none;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    background-color: white;
+    width: 100%;  
+    height: 100%;   
+}
+
+.visible {
+    display: inline-block;
+}
+
+.modal-logo-bars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 86px;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+    padding: 10px 30px;
+}
+
+.modal-nav-button {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.remove-scroll {
+    overflow-y: hidden;
+}
+
+.fa-xmark {
+    cursor: pointer;
+}
+
 @media (max-width: 1023px) {
-    .nav {
+    .container {
+        max-width: 768px;
+    }
+
+    .header {
         display: none;
     }
 
@@ -1379,20 +1531,20 @@ textarea {
 
     .bullets-list {
         width: 768px;
-        align-items: center;
+        justify-content: center;
     }
 
     .bullet {
         width: 175px;
     }
 
-    .social {
+    .social { 
         width: 708px;
         gap: 0;
     }
 
     .footer-section-1 {
-        width: 708px;
+        width: 650px;
         justify-content: flex-start;
         gap: 80px;
     }
@@ -1405,8 +1557,8 @@ textarea {
         max-width: 417px;
     }
 
-    .footer-divider {
-        max-width: 708px;
+    .footer-divider  {
+        width: 708px;
     }
 
 }
@@ -1519,7 +1671,7 @@ textarea {
         width: 360px;
         height: 251px;
         align-items: flex-start;
-        gap: 17px;
+        gap: 0;
     }
 
     .bullet {
@@ -1528,7 +1680,7 @@ textarea {
         width: auto;
     }
 
-    .left-wing, .right-wing {
+    .left-wing {
         display: none;
     }
 
@@ -1552,12 +1704,22 @@ textarea {
         height: 300px;
     }
 
+    .download-2 {
+        text-align: center;
+    }
 
+    .hubspot-section {
+        height: 750px;
+    }
 
+    .hubspot-left {
+        width: 360px;
+        height: 382px;
+    }
 
-
-
-
+    .hubspot-right-description-text {
+        width: 328px;
+    }
 
     .brands-section {
         height: auto;
@@ -1573,17 +1735,12 @@ textarea {
         padding-bottom: 30px;
     }
 
-    .plan {
-        width: 328px;
-    }
-
     .plan-divider {
         width: 248px;
     }
 
     .row-1, .row-2 {
         display: flex;
-        flex-direction: column;
     }
 
     .hire-us-left-top, .hire-us-left-bottom {
@@ -1596,11 +1753,10 @@ textarea {
     }
 
     .hire-us-left, .footer-section-1 {
-        flex-direction: column;
         align-items: center;
     }
 
-    .form-group, .social {
+    .form-group, .social, .hire-us-left, .footer-section-1, .row-1, .row-2 {
         flex-direction: column;
     }
 
@@ -1626,7 +1782,7 @@ textarea {
         gap: 30px;
     }
 
-    .footer-divider {
+    .footer-divider, .all-rights-text, .footer-section-1, .footer-section-3, .plan {
         width: 328px;
     }
 
@@ -1636,5 +1792,42 @@ textarea {
 
     .all-rights {
         width: auto;
+    }
+
+    .why-front-title-section {
+        width: 100%;
+    }
+
+    .social {
+        width: 100%;
+    }
+
+    .hubspot-right {
+        width: 360px;
+    }
+
+    .social-us {
+        flex-direction: column;
+    }
+
+    .circle-right-wing {
+        flex-direction: column;
+    }
+
+    .bullet-top {
+        flex-direction: column;
+    }
+
+    .left-wing, .right-wing {
+        width: 1px;
+        height: 5px;  
+    }
+
+    .left-wing {
+        display: inline-block;
+    }
+
+    .modal-nav-button .nav-list {
+        flex-direction: column;
     }
 }

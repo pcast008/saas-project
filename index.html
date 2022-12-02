@@ -11,25 +11,28 @@
 <body>
     <div id="pageTop"></div>
     <div class="top-section">
-        <div class="top-section-content container">
-            <div class="header-with-bars">
-                <div class="header sticky">
-                    <div class="logo">
-                        <a href="/index.html"><img src="/saas-project-assets/project_logo/logo.svg" alt=""></a>
-                    </div>
-                    <div class="nav">             
-                        <ul class="nav-list">
-                            <li>Home</li>
-                            <li>Features</li>
-                            <li>Learn</li>
-                            <li>Pricing</li>
-                            <li>Hire us</li>
-                        </ul>
-                        <button class="btn"><div class="btn-text">Buy Now</div></button>         
-                    </div> 
+        <div class="top-section-content container">           
+            <div class="header">
+                <div class="logo">
+                    <a href="/index.html"><img src="/saas-project-assets/project_logo/logo.svg" alt=""></a>
                 </div>
-                <div><i class="fa-solid fa-bars"></i></div>
-            </div>     
+                <div class="nav">             
+                    <ul class="nav-list">
+                        <li>Home</li>
+                        <li>Features</li>
+                        <li>Learn</li>
+                        <li>Pricing</li>
+                        <li>Hire us</li>
+                    </ul>
+                    <button class="btn"><div class="btn-text">Buy Now</div></button>         
+                </div> 
+            </div>
+            <div class="header-with-bars">
+                <div class="logo">
+                    <a href="/index.html"><img src="/saas-project-assets/project_logo/logo.svg" alt=""></a>
+                </div>
+                <div class="fa-bars-container"><i class="fa-solid fa-bars"></i></div>
+            </div>                  
             <div class="hero">
                 <div class="left-part">
                     <div class="title-section">
@@ -42,34 +45,31 @@
                     </div>
                 </div>
                 <div class="right-part">
-                    <div class="asana">
+                    <div class="asana animate-slide-up">
                         <img src="/saas-project-assets/logo_icons/asana.png" alt="">
                     </div>
-                    <div class="calendar">
+                    <div class="calendar animate-slide-up">
                         <img src="/saas-project-assets/logo_icons/calendar.png" alt="">
                     </div>
-                    <div class="weave">
+                    <div class="weave animate-slide-up">
                         <img src="/saas-project-assets/logo_icons/weave.png" alt="">
                     </div>
-                    <div class="paypal">
+                    <div class="paypal animate-slide-up-1">
                         <img src="/saas-project-assets/logo_icons/paypal.jpg" alt="">
                     </div>
-                    <div class="atlassian">
+                    <div class="atlassian animate-slide-up-2">
                         <img src="/saas-project-assets/logo_icons/atlassian.png" alt="">
                     </div>
-                    <div class="google-ads">
+                    <div class="google-ads animate-slide-up-2">
                         <img src="/saas-project-assets/logo_icons/google-A.png" alt="">
                     </div>
-                    <div class="google">
+                    <div class="google animate-slide-up-1">
                         <img src="/saas-project-assets/logo_icons/google.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="background-1"></div>
-        <div class="background-2"></div>
     </div>
-
     <div class="key-benefits container">
         <div class="benefits-title-section">
             <div class="benefits-title">Key Benefits</div>
@@ -421,17 +421,19 @@
                     <div><i class="fa-solid fa-greater-than"></i></div>
                     <div class="site-map">Site Map</div>
                 </div>
-                <ul class="social-list">
-                    <li class="social-list-item"><i class="fa-brands fa-facebook-f"></i></li>
-                    <li class="social-list-item"><i class="fa-brands fa-google"></i></li>
-                    <li class="social-list-item"><i class="fa-brands fa-twitter"></i></li>
-                    <li class="social-list-item"><i class="fa-brands fa-github"></i></li>
-                    <li class="united-states">
+                <div class="social-us">
+                    <ul class="social-list">
+                        <li class="social-list-item"><i class="fa-brands fa-facebook-f"></i></li>
+                        <li class="social-list-item"><i class="fa-brands fa-google"></i></li>
+                        <li class="social-list-item"><i class="fa-brands fa-twitter"></i></li>
+                        <li class="social-list-item"><i class="fa-brands fa-github"></i></li>
+                    </ul>
+                    <div class="united-states">
                         <div><i class="fa-solid fa-flag-usa"></i></div>
-                        <div>United States</div>
-                        <div><i class="fa-solid fa-caret-down"></i></div>
-                    </li>
-                </ul>
+                        <div class="us-text">United States</div>
+                        <div><i class="fa-solid fa-angle-down"></i></div>
+                    </div>
+                </div>
             </div>
             <div class="all-rights">
                 <div class="all-rights-header">© Front. 2022 Responsive designs. All rights reserved.</div>
@@ -439,6 +441,58 @@
             </div>
         </div>
     </div>
+
+    <div id="header-modal" class="header-modal">
+        <div class="modal-logo-bars">
+            <div class="logo">
+                <a href="/index.html"><img src="/saas-project-assets/project_logo/logo.svg" alt=""></a>
+            </div>
+            <div class="fa-bars-container"><i id="closeMark" class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="modal-nav-button">
+            <div class="nav">             
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>Learn</li>
+                    <li>Pricing</li>
+                    <li>Hire us</li>
+                </ul>                    
+            </div>
+            <button class="btn"><div class="btn-text">Buy Now</div></button>
+        </div>           
+    </div>
     <a id="scrollUp" href="#pageTop"><i class="fa-solid fa-angle-up"></i></a>
+    <script>
+        const header = document.querySelector('.header')
+        const headerBars = document.querySelector('.header-with-bars')
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 400) {
+                header.classList.add('sticky')
+                headerBars.classList.add('sticky')
+            }
+            else {
+                header.classList.remove('sticky')               
+                headerBars.classList.remove('sticky')              
+            }
+        })
+
+        const hamburger = document.querySelector('.fa-bars')
+        const headerModal = document.getElementById('header-modal')
+        const body = document.querySelector('body')
+
+        hamburger.addEventListener("click", e => {
+            headerModal.classList.toggle('visible')
+            body.classList.toggle('remove-scroll')           
+        })
+
+        const closeMark = document.getElementById('closeMark')
+
+        closeMark.addEventListener("click", e => {
+            headerModal.classList.toggle('visible')
+            body.classList.toggle('remove-scroll')           
+        })
+    </script>
 </body>
 </html>
