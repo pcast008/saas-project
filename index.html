@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d1c8d8d9b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>SaaS</title>
 </head>
 <body>
@@ -470,7 +472,8 @@
             if (window.pageYOffset > 400) {
                 headerBars.classList.add('sticky')
                 headerBars.classList.remove('non-sticky')
-            } else if (headerBars.classList.contains('sticky')){   
+            } 
+            else if (headerBars.classList.contains('sticky')){   
                 headerBars.classList.remove('sticky')
                 headerBars.classList.add('non-sticky')
                 setTimeout(() => {

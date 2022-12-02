@@ -1,15 +1,6 @@
-*,
-::before,
-::after {
-    margin: 0;
-    padding: 0;  
-    color: #677788;
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+
+
 
 .top-section::before {
     content: "";
