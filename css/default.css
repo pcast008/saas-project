@@ -1,0 +1,88 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --accent: #2476FF;
+    --status: #01C9A7;
+    --base-font-color: #677788;
+    --base-cursor: pointer;
+    --base-margin: 0;
+    --base-padding: 0;
+    --base-box-sizing: border-box;
+    --bullet-color: #0066FF;
+    --base-box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+}
+
+*,
+::before,
+::after {
+    margin: var(--base-margin);
+    padding: var(--base-padding);  
+    color: var(--base-font-color);
+    box-sizing: var(--base-box-sizing);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 64rem;
+    margin: auto;
+}
+
+.accent {
+    color: var(--accent);
+    cursor: var(--base-cursor);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border: none;
+    border-radius: 1.875em;
+    background-color: var(--accent);
+    padding: 0.938em 1.563em;
+    cursor: var(--base-cursor);
+}
+
+.btn-text, .fa-circle-play::before, .fa-caret-right::before {
+    color: var(--white);
+}
+
+.fa-circle-play::before {
+    font-weight: 900;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+}
+
+.status {
+    border: none;
+    border-radius: 0.938em;
+    background-color: var(--status);
+    color: var(--white);
+    padding: 0.25em 0.625em;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.remove-scroll {
+    overflow-y: hidden;
+}
+
+.fa-xmark {
+    cursor: var(--base-cursor);
+}
+
+.hire-us-form, .footer {
+    font-size: 14px;
+}
