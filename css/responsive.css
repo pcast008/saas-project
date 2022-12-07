@@ -378,7 +378,7 @@
     }
 
     .hubspot-right-description-text {
-        width: 328px;
+        width: 100%;
     }
 
     .brands-section {
@@ -472,5 +472,21 @@
 
     .banner-play-section {
         padding: 30px;
+    }
+
+    * {
+        outline: 1px solid red !important;
+    }
+
+    .action-section, .hubspot-right-description {
+        width: 100%;
+    }
+
+    .hubspot-right, .hire-us-person-section {
+        padding: 0;
+    }
+
+    .hubspot-right-description-logo img {
+        height: 100%;
     }
 }
