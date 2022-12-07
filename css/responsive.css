@@ -236,6 +236,14 @@
     .why-front-section {
         padding-top: 50px;
     }
+
+    .hubspot-right, .hire-us-person-section {
+        padding: 0;
+    }
+
+    .hubspot-right-description-logo img {
+        height: 100%;
+    }
 }
 
 @media (max-width: 767px) {
