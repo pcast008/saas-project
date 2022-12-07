@@ -474,10 +474,6 @@
         padding: 30px;
     }
 
-    * {
-        outline: 1px solid red !important;
-    }
-
     .action-section, .hubspot-right-description {
         width: 100%;
     }
