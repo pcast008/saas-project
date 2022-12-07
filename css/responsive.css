@@ -248,8 +248,9 @@
 
 @media (max-width: 767px) {
     .title {
-        width: 360px;
+        width: 370px;
     }
+    
     
     .left-part {
         width: 328px;
